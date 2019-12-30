@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+
+
+    <string name="survey_desc_sample"> Honey, why\'re you calling me so late? It\'s kinda hard to talk right now. And honey, why\'re you fighting? Is
+    alright? Well, my girls in the next door. Sometimes I wish it was you.</string>
+</resources>
