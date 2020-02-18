@@ -18,15 +18,25 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
 
     private int[] menuBarIconsUnselected = {
-            R.drawable.ic_list_light,
+           /* R.drawable.ic_list_light,
             R.drawable.ic_account_light,
-            R.drawable.ic_settings_light
+            R.drawable.ic_settings_light*/
+            R.drawable.home_icon,
+            R.drawable.survey_icon,
+            R.drawable.clinical_icon,
+            R.drawable.profile_icon,
+            R.drawable.settings_icon
     };
 
     private int[] menuBarIconsSelected = {
-            R.drawable.ic_list_dark,
+           /* R.drawable.ic_list_dark,
             R.drawable.ic_account_dark,
-            R.drawable.ic_settings_dark
+            R.drawable.ic_settings_dark*/
+            R.drawable.home_icon,
+            R.drawable.survey_icon,
+            R.drawable.clinical_icon,
+            R.drawable.profile_icon,
+            R.drawable.settings_icon
     };
 
     @Override

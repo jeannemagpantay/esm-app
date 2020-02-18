@@ -1,0 +1,44 @@
+{
+  "created_by_id": 1,
+  "title": "Mental Health Survey",
+  "desc": "This survey is to identify symptoms and causes of stress and anxiety in college students",
+   "frequency": 0,
+  "is_test": 0,
+  "start": "2019-12-18",
+  "end": "2019-12-18",
+  "client_id": 1,
+  "sections":
+  [
+    {
+      "title": "Stress",
+      "desc": "To identify symptoms and causes of stress",
+      "is_random": 0,
+      "questions":
+      [
+        {
+          "type": 5,
+          "question": "What causes your stress?",
+          "desc": null,
+          "choices":
+          [
+            "Financial problems",
+            "Work",
+            "Academics",
+            "None of the above"
+          ]
+        },
+        {
+          "type": 2,
+          "question": "If you ever did feel stressed at university, would you speak to someone about it?",
+          "desc": null,
+          "choices":
+          [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    }
+  ],
+
+}

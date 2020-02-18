@@ -1,4 +1,4 @@
-package android.example.esm.homemodule.models;
+package android.example.esm.surveymodule.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -42,6 +42,10 @@ public class SurveyForm {
     @SerializedName("client_id")
     @Expose
     private int clientId;
+
+    @SerializedName("is_active")
+    @Expose
+    private int isActive;
 
     @SerializedName("createdAt")
     @Expose
@@ -125,6 +129,14 @@ public class SurveyForm {
 
     public void setClientId(int clientId) {
         this.clientId = clientId;
+    }
+
+    public int getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(int isActive) {
+        this.isActive = isActive;
     }
 
     public String getDateCreated() {

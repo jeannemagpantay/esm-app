@@ -1,7 +1,9 @@
 package android.example.esm;
 import android.example.esm.homemodule.HomeFragment;
+import android.example.esm.surveymodule.SurveyListFragment;
 import android.example.esm.profilemodule.ProfileFragment;
 import android.example.esm.settingsmodule.SettingsFragment;
+import android.example.esm.therapymodule.TherapyFragment;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -16,9 +18,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         super(fm);
         childFragments = new Fragment[]{
                 new HomeFragment(), //0
-                new ProfileFragment(), //1
+                new SurveyListFragment(),
+                new TherapyFragment(),
+                new ProfileFragment(),
                 new SettingsFragment()
-
         };
     }
 

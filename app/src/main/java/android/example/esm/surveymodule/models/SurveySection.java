@@ -1,4 +1,4 @@
-package android.example.esm.homemodule.models;
+package android.example.esm.surveymodule.models;
 
 
 import com.google.gson.annotations.Expose;
@@ -27,6 +27,10 @@ public class SurveySection {
     @SerializedName("is_random")
     @Expose
     private int isRandom;
+
+    @SerializedName("order_id")
+    @Expose
+    private int orderId;
 
     @SerializedName("survey_questions")
     @Expose
@@ -80,6 +84,11 @@ public class SurveySection {
         this.surveyQuestion = surveyQuestion;
     }
 
+    public int getOrderId() {
+        return orderId;
+    }
 
-
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
+    }
 }

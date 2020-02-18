@@ -1,11 +1,9 @@
-package android.example.esm.homemodule;
+package android.example.esm.surveymodule;
 
-import android.content.Context;
 import android.content.Intent;
 import android.example.esm.API.APIClient;
 import android.example.esm.API.APIInterface;
-import android.example.esm.homemodule.models.SurveyForm;
-import android.net.Uri;
+import android.example.esm.surveymodule.models.SurveyForm;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -18,13 +16,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.example.esm.R;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,8 +35,6 @@ public class SurveyFragment extends Fragment {
     private String desc;
     TextView surveyTitle;
     TextView surveyDesc;
-
-
 
 
     @Override
@@ -84,7 +78,7 @@ public class SurveyFragment extends Fragment {
 
             @Override
             public void onFailure(Call<List<SurveyForm>> call, Throwable t) {
-                Log.d("here", t.getMessage());
+                Log.d("here", "failure "+ t.getMessage());
             }
         });
 

@@ -6,6 +6,7 @@ import android.example.esm.API.APIInterface;
 import android.example.esm.MainActivity;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.example.esm.R;
 import android.util.Log;
@@ -25,8 +26,8 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText loginUsername;
     EditText loginPassword;
-    Button loginButton;
-    TextView loginCreate;
+    CardView loginButton;
+    //TextView loginCreate;
     String username, password;
 
     @Override
@@ -37,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         loginUsername = findViewById(R.id.login_username);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
-        loginCreate = findViewById(R.id.login_create);
+        //loginCreate = findViewById(R.id.login_create);
 
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +74,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+/*
         loginCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+*/
 
 
 

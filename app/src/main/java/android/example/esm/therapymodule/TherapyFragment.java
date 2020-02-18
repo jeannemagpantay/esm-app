@@ -1,4 +1,4 @@
-package android.example.esm.homemodule;
+package android.example.esm.therapymodule;
 
 import android.content.Context;
 import android.example.esm.surveymodule.SurveyFragment;
@@ -15,11 +15,10 @@ import android.view.ViewGroup;
 import android.example.esm.R;
 
 
-public class HomeFragment extends Fragment {
+public class TherapyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-
+        View rootView = inflater.inflate(R.layout.fragment_therapy, container, false);
 
         return rootView;
     }

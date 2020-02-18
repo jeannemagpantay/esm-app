@@ -1,11 +1,10 @@
-package android.example.esm.homemodule;
+package android.example.esm.surveymodule;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.example.esm.R;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 public class SurveyDetailsActivity extends AppCompatActivity {
@@ -18,18 +17,20 @@ public class SurveyDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey_details);
 
+        title = (TextView) findViewById(R.id.survey_details_title);;
+        desc = (TextView) findViewById(R.id.survey_details_desc);
+
         Intent intent = getIntent();
         mTitle = intent.getStringExtra("title");
         mDesc = intent.getStringExtra("desc");
 
-        title = findViewById(R.id.survey_title);;
-        desc = findViewById(R.id.survey_desc);
-        title.setText(mTitle);
-        if (mDesc != null){
+
+        if (mTitle != null || !mTitle.equals("")){
+            title.setText(mTitle);
+        }
+        if (mDesc != null  || !mDesc.equals("")){
             desc.setText(mDesc);
         }
-
-
     }
 
 

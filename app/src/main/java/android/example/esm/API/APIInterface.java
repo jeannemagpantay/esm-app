@@ -1,6 +1,6 @@
 package android.example.esm.API;
 
-import android.example.esm.homemodule.models.SurveyForm;
+import android.example.esm.surveymodule.models.SurveyForm;
 import android.example.esm.loginmodule.Account;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public interface APIInterface {
     );
 
     @FormUrlEncoded
-    @POST("api/respondent/signin")
+    @POST("api/client/signin")
     Call<Account> login(
             @Field("username") String username,
             @Field("password") String password

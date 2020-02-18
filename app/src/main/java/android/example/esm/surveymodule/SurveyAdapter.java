@@ -1,8 +1,8 @@
-package android.example.esm.homemodule;
+package android.example.esm.surveymodule;
 
 import android.content.Context;
 import android.example.esm.R;
-import android.example.esm.homemodule.models.SurveyForm;
+import android.example.esm.surveymodule.models.SurveyForm;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
