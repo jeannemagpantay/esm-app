@@ -9,6 +9,6 @@ This mobile app was created using Android Studio and Java. It also made use of R
 Download the APK at https://bit.ly/esm-app-apk.
 
 # Author
-Jeanne Nicole Magpantay  
+Jeanne Nicole Magpantay | jlmagpantay@up.edu.ph  
 Scientific Computing Laboratory  
 Dept. of Computer Science, UP Diliman
