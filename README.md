@@ -5,7 +5,7 @@ Greetings!
 Due to the pandemic, this undergraduate thesis project was unfortunately put into halt, leaving the mobile application at development stage. For questions, please contact the author.
 
 # Technology
-This mobile app was created using Android Studio and Java. It also made use of Retrofit for the API.  
+This mobile app was created using Android Studio and Java. It also made use of Retrofit for the API. For other dependencies, please check build.gradle file.
 Download the APK at https://bit.ly/esm-app-apk.
 
 # Author
