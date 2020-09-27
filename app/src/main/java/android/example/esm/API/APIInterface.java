@@ -1,6 +1,6 @@
 package android.example.esm.API;
 
-import android.example.esm.surveymodule.models.SurveyForm;
+import android.example.esm.researchmodule.models.SurveyForm;
 import android.example.esm.loginmodule.Account;
 
 import java.util.List;
@@ -33,7 +33,10 @@ public interface APIInterface {
     @GET("api/respondents")
     Call<Account> getAllUsers();
 
-    @GET("api/view-all-survey")
-    Call<List<SurveyForm>> getSurveys();
+    @GET("api/view-survey/L6ow8pND")
+    Call<List<SurveyForm>> getSurveyList();
+
+    @GET("api/view-survey/L6ow8pND")
+    Call<SurveyForm> getSurveys();
 
 }

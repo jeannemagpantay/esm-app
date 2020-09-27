@@ -25,45 +25,35 @@
         android:layout_alignLeft="@id/text_welcome"
         android:textColor="#4D4747"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="47dp"
-        android:src="@drawable/character"
-        android:translationZ="1dp"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="260dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="282dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="289dp"
         android:src="@drawable/paws"
         android:translationZ="10dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="546dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="162dp"
-        android:layout_marginEnd="-35dp"
-        android:src="@drawable/character_bg"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="-50dp"
+        android:src="@drawable/welcome"
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="131dp" />
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_login"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#74BEC1"
+        app:cardBackgroundColor="#FBC4A2"
         app:cardCornerRadius="30dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -81,9 +71,9 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:layout_marginTop="40dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:hint="username"
                 android:background="@android:color/white"
                 android:padding="10dp"/>
@@ -97,8 +87,8 @@
                 android:inputType="textPassword"
                 android:autofillHints="password"
                 android:layout_marginTop="40dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:hint="password"
                 android:padding="10dp"
                 android:background="@android:color/white"/>
@@ -112,7 +102,7 @@
                 android:layout_marginTop="30dp"
                 app:cardCornerRadius="20dp"
                 android:layout_marginBottom="30dp"
-                app:cardBackgroundColor="#385170">
+                app:cardBackgroundColor="#ECDFC8">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -122,8 +112,9 @@
                     android:layout_marginLeft="70dp"
                     android:layout_marginRight="70dp"
                     android:text="Log In"
+                    android:textStyle="bold"
                     android:layout_gravity="center_horizontal"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="#707070"/>
 
 
             </androidx.cardview.widget.CardView>

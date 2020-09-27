@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#008577</color>
+    <color name="colorPrimary">#FDD0AF</color>
+    <color name="colorPrimaryDark">#DF7861</color>
+    <color name="colorAccent">#74bcc4</color>
 
-    <color name= "menuBar">#008577</color>
+    <color name= "menuBar">#74bcc4</color>
     <color name= "white"> #ffffff</color>
+
+    <color name="chatbotBubble">#ECECEC</color>
+    <color name="progressBar">#DF7861</color>
+    <color name="gray">#D8BDA4</color>
+    <color name="surveyItem">#FFDAB9</color>
 </resources>

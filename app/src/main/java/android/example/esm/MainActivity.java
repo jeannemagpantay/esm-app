@@ -1,9 +1,14 @@
 package android.example.esm;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -16,27 +21,20 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout menuBar;
     private ViewPager viewPager;
+    int tabOpen = 0;
 
     private int[] menuBarIconsUnselected = {
-           /* R.drawable.ic_list_light,
-            R.drawable.ic_account_light,
-            R.drawable.ic_settings_light*/
             R.drawable.home_icon,
             R.drawable.survey_icon,
             R.drawable.clinical_icon,
-            R.drawable.profile_icon,
             R.drawable.settings_icon
     };
 
     private int[] menuBarIconsSelected = {
-           /* R.drawable.ic_list_dark,
-            R.drawable.ic_account_dark,
-            R.drawable.ic_settings_dark*/
-            R.drawable.home_icon,
-            R.drawable.survey_icon,
-            R.drawable.clinical_icon,
-            R.drawable.profile_icon,
-            R.drawable.settings_icon
+            R.drawable.home_icon_selected,
+            R.drawable.survey_icon_selected,
+            R.drawable.clinical_icon_selected,
+            R.drawable.settings_icon_selected
     };
 
     @Override
@@ -46,14 +44,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
-        viewPager.setOffscreenPageLimit(3);
+        viewPager.setOffscreenPageLimit(4);
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
 
         menuBar = (TabLayout) findViewById(R.id.menu_bar);
         menuBar.setupWithViewPager(viewPager);
 
-        // Initialize Menu Bar Icons
-
+        Intent intent = getIntent();
+        tabOpen = intent.getIntExtra("TabNumber", 0);
+        if (tabOpen == 1){
+            jumpToSurveys();
+        }
     }
 
     @Override
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
                 int position = tab.getPosition();
 
                 menuBar.getTabAt(position).setIcon(menuBarIconsSelected[position]);
+                int tabIconColor = ContextCompat.getColor(getApplicationContext(), R.color.menuBar);
+                tab.getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
             }
 
             @Override
@@ -79,6 +82,10 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
                 int position = tab.getPosition();
                 menuBar.getTabAt(position).setIcon(menuBarIconsSelected[position]);
+                int tabIconColor = ContextCompat.getColor(getApplicationContext(), R.color.menuBar);
+                tab.getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+
+
             }
         });
 
@@ -86,9 +93,33 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupMenuBarIcons() {
-        menuBar.getTabAt(0).setIcon(menuBarIconsSelected[0]);
+
+        int tabIconColor = ContextCompat.getColor(getApplicationContext(), R.color.menuBar);
+
+        menuBar.getTabAt(0).setIcon(menuBarIconsUnselected[0]);
         menuBar.getTabAt(1).setIcon(menuBarIconsUnselected[1]);
         menuBar.getTabAt(2).setIcon(menuBarIconsUnselected[2]);
+        menuBar.getTabAt(3).setIcon(menuBarIconsUnselected[3]);
+
+        if (viewPager.getCurrentItem() == 0){
+            menuBar.getTabAt(0).getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        } else if (viewPager.getCurrentItem() == 1){
+            menuBar.getTabAt(1).getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        } else if (viewPager.getCurrentItem() == 2){
+            menuBar.getTabAt(2).getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        } else if (viewPager.getCurrentItem() == 3){
+            menuBar.getTabAt(3).getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
+        }
+
+
+
+
+
+    }
+
+    public void jumpToSurveys(){
+        viewPager.setCurrentItem(1);
+        setupMenuBarIcons();
     }
 
 /*    @Subscribe(threadMode = ThreadMode.MAIN.MAIN)

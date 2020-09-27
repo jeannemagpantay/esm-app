@@ -8,20 +8,21 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.tabs.TabLayout
+        android:background="@color/white"
+        android:layout_marginTop="3dp"
         android:id="@+id/menu_bar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_gravity="top"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:tabBackground="@color/white"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/menuBar"
         app:tabMaxWidth="0dp"
         app:tabMode="fixed"
         app:tabPaddingBottom="-5dp"
-        app:tabSelectedTextColor="@color/white" />
+        app:tabSelectedTextColor="@color/menuBar"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"/>
 
 
     <androidx.viewpager.widget.ViewPager
